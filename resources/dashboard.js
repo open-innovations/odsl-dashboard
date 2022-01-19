@@ -430,8 +430,10 @@
 				}
 
 				for(e in this.panels[p].config.els){
+
 					elem = this.panels[p].el.querySelector(e);
 					el = this.panels[p].config.els[e];
+					if(!elem) continue;
 
 					// If the element doesn't exist in the DOM we skip this
 					if(elem.length == 0) continue;
