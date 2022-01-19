@@ -35,6 +35,17 @@
 			},
 			'class':'theme-bg'
 		},
+		"speakers": {
+			"start": "Month",
+			"end": "Month",
+			"data": ["data/monthly.csv"],
+			"max":1000,
+			"els": {
+				".number": { "col": "Speakers", "op": "sum", "animate": true },
+				".lastupdated": { "col": "Month", "row": "last" }
+			},
+			'class':'theme-bg'
+		},
 		"sponsors": {
 			"start": "Date start",
 			"end": "Date end",
@@ -83,9 +94,9 @@
 					<div class="panel">
 						<div class="title">Events</div>
 						<div class="number less"></div>
-						<p class="more">Number of events hosted at Open Innovations</p>
+						<p class="more">Number of events hosted at ODSL</p>
 						<div class="graph more"></div>
-						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/events_monthly.csv" class="lastupdated">events data</a></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/open-innovations/dashboard/tree/gh-pages/data/monthly.csv" class="lastupdated">events data</a></div>
 					</div>
 				</div>
 			</li>
@@ -94,9 +105,20 @@
 					<div class="panel">
 						<div class="title">Event reach</div>
 						<div class="number less"></div>
-						<p class="more">Number of people at Open Innovations events</p>
+						<p class="more">Number of people at ODSL events</p>
 						<div class="graph more"></div>
-						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/events_monthly.csv" class="lastupdated">events data by month</a></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/open-innovations/dashboard/tree/gh-pages/data/monthly.csv" class="lastupdated">events data by month</a></div>
+					</div>
+				</div>
+			</li>
+			<li id="speakers">
+				<div class="box">
+					<div class="panel">
+						<div class="title">Speakers</div>
+						<div class="number less"></div>
+						<p class="more">Number of speakers at ODSL events</p>
+<!--						<div class="graph more"></div>-->
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/open-innovations/dashboard/tree/gh-pages/data/monthly.csv" class="lastupdated">speakers by month</a></div>
 					</div>
 				</div>
 			</li>
@@ -107,7 +129,7 @@
 						<p class="more">Thank you to the people who make it happen. Become a sponsor or supporter.</p>
 						<div class="number less"></div>
 						<div class="icons more"></div>
-						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/sponsors.csv" class="lastupdated">table of sponsors</a></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/open-innovations/dashboard/tree/gh-pages/data/sponsors.csv" class="lastupdated">table of sponsors</a></div>
 					</div>
 				</div>
 			</li>
@@ -118,7 +140,7 @@
 						<p class="more">We publish all of our work openly on the web take a look here:</p>
 						<div class="number less"></div>
 						<div class="list more"></div>
-						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated">data abour our clients</a></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated">data abour our blog posts</a></div>
 					</div>
 				</div>
 			</li>
