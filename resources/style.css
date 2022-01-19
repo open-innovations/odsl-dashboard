@@ -310,7 +310,7 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 	color: black;
 }
 a.grid-item:focus, a.grid-item:hover {
-	background: #3aa5ed;
+	background: rgba(0,0,0,0.15);
 	color: white;
 }
 .c1-bg { background-color: #2254F4; color: white; }
