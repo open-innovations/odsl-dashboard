@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<base target="_parent" />
+	<link rel="shortcut icon" href="https://opendatasaveslives.org/resources/odsl-favicon.svg" />
+	<link rel="stylesheet" media="all" href="resources/style.css"  type="text/css" />
+	<title>OpenDataSavesLives Dashboard v1.0</title>
+	<meta name="description" content="We keep a record of how we are doing on our public dashboard.">
+	<meta name="keywords" content="dashboard,stats,summary">
+	<script type="text/javascript" src="resources/dashboard.js"></script>
+	<script>
+	var panels = {
+		"events": {
+			"start": "Month",
+			"end": "Month",
+			"data": ["data/monthly.csv"],
+			"els": {
+				".number": { "col": "Events", "op": "sum", "animate": true },
+				".graph": { "col": "Events", "row": "all", "type": "graph" },
+				".lastupdated": { "col": "Month", "row": "last" }
+			},
+			'class':'theme-bg'
+		},
+		"reach": {
+			"start": "Month",
+			"end": "Month",
+			"data": ["data/monthly.csv"],
+			"max":1000,
+			"els": {
+				".number": { "col": "Attendance", "op": "sum", "animate": true },
+				".graph": { "col": "Attendance", "row": "all", "type": "graph" },
+				".lastupdated": { "col": "Month", "row": "last" }
+			},
+			'class':'theme-bg'
+		},
+		"sponsors": {
+			"start": "Date start",
+			"end": "Date end",
+			"data": ["data/sponsors.csv"],
+			"els": {
+				".number": { "col": "Index", "op": "count", "animate": true },
+				".icons": { "col": "Sponsor", "img": "logo", "url": "url", "row": "all", "type": "images" },
+				".lastupdated": { "col": "Date start", "row": "last" }
+			},
+			'class':'theme-bg'
+		},
+		"blog": {
+			"start": "Date",
+			"end": "Date",
+			"max": 12,
+			"data": ["data/blogs.csv"],
+			"els": {
+				".number": { "col": "Date", "op": "count", "animate": true },
+				".list": { "col": "Title", "url": "URL", "row": "all", "type": "list", "colour": "grid-item", "val": function(v){
+					return v['Title']+'<br />'+v['Date'].substr(0,10);
+				}},
+				".lastupdated": { "col": "Date", "row": "last", "val": function(v){ return v['Date'].substr(0,10); } }
+			},
+			'class':'theme-bg'
+		}
+	}
+	var db;
+	ODI.ready(function(){
+		db = new ODI.Dashboard();
+		db.setup({'year':'#range','config':panels});
+	});
+	</script>
+	<link href="icon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+</head>
+<body class="b6-bg">
+
+	<a name="top"></a>
+	<div class="dashboard">
+		<div id="cover"></div>
+		<header class="b6-bg">
+			<h1><a href="https://opendatasaveslives.org/"><img src="https://opendatasaveslives.org/media/odsl.svg" /></a> <select id="range" name="range"><option value="default">Dashboard</option><option value="lifetime">Lifetime impact</option><option value="2021">2021 impact</option><option value="2020">2020 impact</option><option value="2019">2019 impact</option><option value="2018">2018 impact</option><option value="2017">2017 impact</option><option value="2016">2016 impact</option><option value="2015">2015 impact</option><option value="2014">2014 impact</option></select></h1>
+		</header>
+		<ul class="panels">
+			<li id="events" tabindex="0">
+				<div class="box">
+					<div class="panel">
+						<div class="title">Events</div>
+						<div class="number less"></div>
+						<p class="more">Number of events hosted at Open Innovations</p>
+						<div class="graph more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/events_monthly.csv" class="lastupdated">events data</a></div>
+					</div>
+				</div>
+			</li>
+			<li id="reach">
+				<div class="box">
+					<div class="panel">
+						<div class="title">Event reach</div>
+						<div class="number less"></div>
+						<p class="more">Number of people at Open Innovations events</p>
+						<div class="graph more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/events_monthly.csv" class="lastupdated">events data by month</a></div>
+					</div>
+				</div>
+			</li>
+			<li id="sponsors">
+				<div class="box">
+					<div class="panel sponsors">
+						<div class="title">Sponsors and supporters</div>
+						<p class="more">Thank you to the people who make it happen. Become a sponsor or supporter.</p>
+						<div class="number less"></div>
+						<div class="icons more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/sponsors.csv" class="lastupdated">table of sponsors</a></div>
+					</div>
+				</div>
+			</li>
+			<li class="empty" id="blog">
+				<div class="box">
+					<div class="panel blog">
+						<div class="title">Blog posts</div>
+						<p class="more">We publish all of our work openly on the web take a look here:</p>
+						<div class="number less"></div>
+						<div class="list more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated">data abour our clients</a></div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script src="https://open-innovations.org/resources/oi.log.js"></script>
+	<script>
+	OI.log.setup({'id':'odsl','target':['opendatasaveslives.org']}).add('action=view');
+	</script>
+
+</body>
+</html>
