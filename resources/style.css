@@ -132,7 +132,7 @@ header h1 img { float: left; position: relative; height: 48px; margin-right:16px
 	padding-top: 80px;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	grid-template-rows: repeat(2, 1fr);
-	grid-gap: 8px;
+	grid-gap: 1em;
 }
 .panels li {
 	display: block;
