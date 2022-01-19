@@ -1,32 +1,32 @@
-Date,Title,Status,Attendance,Attendance source
-2020-03-26T12:00Z,"#OpenDataSavesLives launch webinar",CONFIRMED,62,Calendar
-2020-04-02T11:00Z,"Session 2",CONFIRMED,22,Calendar
-2020-04-09T11:00Z,"Session 3",CONFIRMED,21,Calendar
-2020-04-16T11:00Z,"Session 4",CONFIRMED,22,Calendar
-2020-04-23T11:00Z,"Session 5",CONFIRMED,47,Calendar
-2020-04-30T11:00Z,"Session 6",CONFIRMED,33,Calendar
-2020-05-14T11:00Z,"Session 7",CONFIRMED,45,Calendar
-2020-05-21T11:00Z,"Session 8",CONFIRMED,26,Calendar
-2020-06-04T11:00Z,"Session 9",CONFIRMED,41,Calendar
-2020-06-11T11:00Z,"Session 10",CONFIRMED,31,Calendar
-2020-06-18T11:00Z,"Session 11",CONFIRMED,24,Calendar
-2020-06-25T11:00Z,"Session 12",CONFIRMED,60,Calendar
-2020-08-06T11:00Z,"Session 13",CONFIRMED,53,Calendar
-2020-08-27T11:00Z,"Session 14",CONFIRMED,25,Calendar
-2020-09-10T11:00Z,"Session 15",CONFIRMED,45,Calendar
-2020-09-24T11:00Z,"Session 16",CONFIRMED,53,Calendar
-2020-10-08T11:00Z,"Session 17",CONFIRMED,27,Calendar
-2020-11-05T12:00Z,"Session 18",CONFIRMED,53,Calendar
-2020-11-19T12:00Z,"Session 19",CONFIRMED,32,Calendar
-2020-12-03T12:00Z,"Session 20",CONFIRMED,40,Calendar
-2021-01-21T12:00Z,"Session 21: 'vaccination data' special",CONFIRMED,45,Calendar
-2021-01-28T12:00Z,"Session 22",CONFIRMED,61,Calendar
-2021-02-11T12:00Z,"Session 23",CONFIRMED,66,Calendar
-2021-03-04T12:00Z,"Session 24",CONFIRMED,40,Calendar
-2021-03-18T12:00Z,"Session 25: Goldacre Review Special",CONFIRMED,36,Calendar
-2021-04-22T11:00Z,"Session 26",CONFIRMED,29,Calendar
-2021-05-06T11:00Z,"Session 27",CONFIRMED,49,Calendar
-2021-07-08T11:00Z,"Session 28: GP Data Special",CONFIRMED,51,Calendar
-2021-09-29T09:00Z,"OpenDataSavesLives: The Unconference",CONFIRMED,62,Calendar
-2021-11-10T12:00Z,"Session 29: Mental Health Data",CONFIRMED,50,Calendar
-2021-12-09T12:00Z,"Session 30: Mental Health Data",CONFIRMED,40,Calendar
+Date,Title,Attendance
+2020-03-26T12:00Z,"#OpenDataSavesLives launch webinar",62
+2020-04-02T11:00Z,"Session 2",22
+2020-04-09T11:00Z,"Session 3",21
+2020-04-16T11:00Z,"Session 4",22
+2020-04-23T11:00Z,"Session 5",47
+2020-04-30T11:00Z,"Session 6",33
+2020-05-14T11:00Z,"Session 7",45
+2020-05-21T11:00Z,"Session 8",26
+2020-06-04T11:00Z,"Session 9",41
+2020-06-11T11:00Z,"Session 10",31
+2020-06-18T11:00Z,"Session 11",24
+2020-06-25T11:00Z,"Session 12",60
+2020-08-06T11:00Z,"Session 13",53
+2020-08-27T11:00Z,"Session 14",25
+2020-09-10T11:00Z,"Session 15",45
+2020-09-24T11:00Z,"Session 16",53
+2020-10-08T11:00Z,"Session 17",27
+2020-11-05T12:00Z,"Session 18",53
+2020-11-19T12:00Z,"Session 19",32
+2020-12-03T12:00Z,"Session 20",40
+2021-01-21T12:00Z,"Session 21: 'vaccination data' special",45
+2021-01-28T12:00Z,"Session 22",61
+2021-02-11T12:00Z,"Session 23",66
+2021-03-04T12:00Z,"Session 24",40
+2021-03-18T12:00Z,"Session 25: Goldacre Review Special",36
+2021-04-22T11:00Z,"Session 26",29
+2021-05-06T11:00Z,"Session 27",49
+2021-07-08T11:00Z,"Session 28: GP Data Special",51
+2021-09-29T09:00Z,"OpenDataSavesLives: The Unconference",62
+2021-11-10T12:00Z,"Session 29: Mental Health Data",50
+2021-12-09T12:00Z,"Session 30: Mental Health Data",40
