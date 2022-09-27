@@ -476,7 +476,8 @@
 								colurl = el.url;
 								mn = data.length - (this.panels[p].config.max || data.length);
 								if(mn < 0) mn = 0;
-								for(r = data.length-1; r >= mn; r--){
+								var added = 0;
+								for(r = data.length-1; r >= 0; r--){
 									sd = data[r][coldate];
 									ed = (new Date()).toISOString();
 									if(colend && data[r][colend]) ed = data[r][colend];
@@ -487,7 +488,13 @@
 										else colour = el.colour;
 									}
 									if(colour == this.panels[p].config['class']) colour += " bordered";
-									if(this.inDateRange(sd,ed,view)) list.push((colurl ? '<a href="'+data[r][colurl]+'" class="box '+colour+'">':'<div class="box">')+'<div class="panel">'+(typeof el.val==="function" ? el.val.call(this.panels[p],data[r]) : data[r][col])+'</div>'+(colurl ? '</a>':'</div>'));
+									// Limit to items within the date range
+									if(this.inDateRange(sd,ed,view)){
+										list.push((colurl ? '<a href="'+data[r][colurl]+'" class="box '+colour+'">':'<div class="box">')+'<div class="panel">'+(typeof el.val==="function" ? el.val.call(this.panels[p],data[r]) : data[r][col])+'</div>'+(colurl ? '</a>':'</div>'));
+										added++;
+									}
+									// If we've set a maximum number to show, limit us to that
+									if(typeof this.panels[p].config.max==="number" && added >= this.panels[p].config.max) r = 0;
 								}
 								this.panels[p].updateable.push({'el':e,'n':elem,'list':list,'cls':'grid','duration':(el.animate ? this.duration : 0)});
 							}else if(el.type=="graph"){
